@@ -1,14 +1,14 @@
 title: Ajit Notebook
 description: "A place where Ajit keeps notes useful to him and others"
-url: https://ajit-y.github.io/ajit-notebook/
-baseurl: ""
+# url: https://ajit-y.github.io/ajit-notebook/
+# baseurl: ""
 timezone: Europe/London
 theme: jekyll-theme-cayman
 permalink: pretty
 # github: [metadata]
 
 # Content
-image_serve_path: "/assets/images"
+# image_serve_path: "/assets/images"
 
 exclude:
   - README.md
