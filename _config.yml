@@ -12,6 +12,5 @@ image_serve_path: "/assets/images"
 
 exclude:
   - README.md
-  - vendor
   - Gemfile
   - Gemfile.lock
