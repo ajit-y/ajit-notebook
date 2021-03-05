@@ -8,7 +8,7 @@ permalink: pretty
 github: [metadata]
 
 # Content
-# image_serve_path: "/assets/images"
+image_serve_path: "/assets/images"
 
 exclude:
   - README.md
