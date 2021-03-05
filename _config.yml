@@ -5,7 +5,7 @@ baseurl: ""
 timezone: Europe/London
 theme: jekyll-theme-cayman
 permalink: pretty
-repository: https://github.com/ajit-y/ajit-notebook
+github: [metadata]
 
 # Content
 image_serve_path: "/assets/images"
