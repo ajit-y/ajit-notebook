@@ -3,7 +3,7 @@ description: "A notebook"
 url: https://ajit-y.github.io/ajit-notebook/
 baseurl: "/ajit-notebook"
 timezone: Europe/London
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.22.0
 permalink: pretty
 github: [metadata]
 
@@ -14,3 +14,10 @@ exclude:
   - vendor
   - publish.sh
   - package.json
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-include-cache
