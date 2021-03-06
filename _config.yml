@@ -1,9 +1,9 @@
-title: Ajit Notebook
-description: "A place where Ajit keeps notes useful to him and others"
+title: Ajit's Notebook
+description: "A notebook"
 url: https://ajit-y.github.io/ajit-notebook/
 baseurl: "/ajit-notebook"
 timezone: Europe/London
-theme: jekyll-theme-cayman
+theme: minimal-mistakes-jekyll
 permalink: pretty
 github: [metadata]
 
@@ -12,3 +12,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - publish.sh
+  - package.json
