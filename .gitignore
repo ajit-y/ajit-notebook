@@ -16,6 +16,7 @@ Gemfile.lock
 .DS_Store
 *.swp
 *~
+*.idea
 
 # Folders
 /vendor
@@ -26,3 +27,4 @@ gh-pages/
 pkg/
 test/dest
 tmp/*
+.idea/*

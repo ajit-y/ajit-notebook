@@ -1,12 +1,40 @@
-title: Ajit's Notebook
+title: Ajit Notebook
 description: "A notebook"
 url: https://ajit-y.github.io/ajit-notebook/
 baseurl: "/ajit-notebook"
 timezone: Europe/London
 remote_theme: mmistakes/minimal-mistakes@4.22.0
 permalink: pretty
-github: [metadata]
+github: [ metadata ]
 
+# Site Customizations
+masthead_title: "Ajit's Notebook"
+breadcrumbs: true  # disabled by default
+search: true # Default "Lunr" search.
+# Only the first 50 words of a post or page’s body content is added to the Lunr search index.
+# Setting search_full_content to true in your _config.yml will override this and could impact page load performance.
+
+# Setting defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      #author_profile: true
+      #read_time: true
+      #comments: true
+      #share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
+# Setting exclusions
 exclude:
   - README.md
   - Gemfile
@@ -15,9 +43,27 @@ exclude:
   - publish.sh
   - package.json
 
+# Setting plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-remote-theme
   - jekyll-include-cache
+
+# Site Author details
+author:
+  name: "Ajit Yadav"
+  #avatar   : "/assets/images/bio-photo.jpg"
+  bio: "A tech learning enthusiast"
+  location: "UK"
+
+# Site footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/i_am_ajit_y"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ajit-y"
