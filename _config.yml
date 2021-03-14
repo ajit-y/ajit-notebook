@@ -1,18 +1,37 @@
+# Site Details
 title: Ajit Notebook
 description: "A notebook"
 url: https://ajit-y.github.io/ajit-notebook/
 baseurl: "/ajit-notebook"
 timezone: Europe/London
 remote_theme: mmistakes/minimal-mistakes@4.22.0
-permalink: pretty
 github: [ metadata ]
 
 # Site Customizations
 masthead_title: "Ajit's Notebook"
-breadcrumbs: true  # disabled by default
+breadcrumbs: false  # disabled by default
 search: true # Default "Lunr" search.
 # Only the first 50 words of a post or page’s body content is added to the Lunr search index.
 # Setting search_full_content to true in your _config.yml will override this and could impact page load performance.
+permalink: none
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Home Page posts pagination
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+
+# Setting Collections
+collections_dir: all_collections
+
+collections:
+  java:
+    output: true
+    permalink: /:collection/:path
 
 # Setting defaults
 defaults:
@@ -33,6 +52,18 @@ defaults:
       type: pages
     values:
       layout: single
+  # _java
+  - scope:
+      path: ""
+      type: java
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+
+# Setting inclusions
+include: [ "_pages" ]
 
 # Setting exclusions
 exclude:
@@ -63,7 +94,7 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/i_am_ajit_y"
+      url: "https://twitter.com/i_m_ajit_y"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ajit-y"

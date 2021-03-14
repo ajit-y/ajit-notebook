@@ -1,5 +1,4 @@
 main:
-  - title: "Technical"
-    url: /technical/
-  - title: "HowToGuides"
-    url: /how-to-guides/
+
+  - title: "Blog"
+    url: /categories/
