@@ -1,6 +1,5 @@
 ---
 title: "Home"
-layout: home
 ---
 List of collections
 Recent Blog Posts

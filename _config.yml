@@ -13,7 +13,7 @@ breadcrumbs: false  # disabled by default
 search: true # Default "Lunr" search.
 # Only the first 50 words of a post or page’s body content is added to the Lunr search index.
 # Setting search_full_content to true in your _config.yml will override this and could impact page load performance.
-permalink: none
+permalink: /:title:output_ext
 category_archive:
   type: liquid
   path: /categories/
@@ -23,7 +23,7 @@ tag_archive:
 
 # Home Page posts pagination
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /blog/page:num/
 
 # Setting Collections
 collections_dir: all_collections
