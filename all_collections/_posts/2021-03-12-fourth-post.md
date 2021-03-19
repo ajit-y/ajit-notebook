@@ -1,5 +1,5 @@
 ---
-categories: blog
+categories: diy
 tags: diy
 ---
 Fourth post

@@ -1,5 +1,5 @@
 ---
-categories: blog
+categories: social
 tags: social
 ---
 Second post

@@ -1,8 +1,8 @@
 ---
-title: Java
-layout: collection
+title: Java Notes
 permalink: /java/
 collection: java
-entries_layout: grid
 classes: wide
+sidebar:
+    nav: "java"
 ---

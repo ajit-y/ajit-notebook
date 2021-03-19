@@ -1,5 +1,5 @@
 ---
-categories: blog
-tags: diy
+categories: social
+tags: social
 ---
 Third post

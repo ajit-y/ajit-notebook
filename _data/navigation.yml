@@ -1,4 +1,31 @@
 main:
-
   - title: "Blog"
-    url: /categories/
+    url: /blog/
+  - title: "Notebook"
+    url: /notebook/
+  - title: "Projects"
+    url: /projects/
+  - title: "About"
+    url: /about/
+  - title: "CV"
+    url: /cv/
+
+blog:
+  - title: Filter Posts
+    children:
+      - title: "Posts By Categories"
+        url: /blog/categories/
+      - title: "Posts By Tags"
+        url: /blog/tags/
+      - title: "Posts By Year"
+        url: /blog/
+
+java:
+  - title: Java Notes
+    children:
+      - title: "Introduction"
+        url: /java/
+      - title: "First File"
+        url: /java/first-java-file
+      - title: "Second file"
+        url: /java/second-java-file

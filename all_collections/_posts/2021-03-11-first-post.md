@@ -1,5 +1,5 @@
 ---
-categories: blog travel
+categories: travel
 tags: travel
 ---
 First post

@@ -1,7 +1,9 @@
 ---
-title: Blog Posts
-permalink: /categories/
+title: Posts by Categories
+permalink: /blog/categories/
 entries_layout: list
-layout: home
+layout: categories
 classes: wide
+sidebar:
+    nav: "blog"
 ---

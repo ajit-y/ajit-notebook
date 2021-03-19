@@ -1,39 +1,82 @@
 # Site Details
-title: Ajit Notebook
-description: "A notebook"
+#-------------------------------------------------------------------------------------
+title: Ajit Yadav
+subtitle: "Hello from Ajit"
+#masthead_title: "Home"
+description: "A personal site for notes, blog articles, portfolio and profile for Ajit"
+name: "Ajit Yadav"
 url: https://ajit-y.github.io/ajit-notebook/
 baseurl: "/ajit-notebook"
+permalink: /:title
 timezone: Europe/London
-remote_theme: mmistakes/minimal-mistakes@4.22.0
-github: [ metadata ]
-
-# Site Customizations
-masthead_title: "Ajit's Notebook"
+#github: [ metadata ]
+repository: "ajit-y/ajit-notebook"
+#logo:
+#teaser:
 breadcrumbs: false  # disabled by default
-search: true # Default "Lunr" search.
-# Only the first 50 words of a post or page’s body content is added to the Lunr search index.
-# Setting search_full_content to true in your _config.yml will override this and could impact page load performance.
-permalink: /:title:output_ext
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
 
-# Home Page posts pagination
-paginate: 5 # amount of posts to show
-paginate_path: /blog/page:num/
+# Theme
+#-------------------------------------------------------------------------------------
+remote_theme: mmistakes/minimal-mistakes@4.22.0
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Search
+#-------------------------------------------------------------------------------------
+search: true # Default "Lunr" search.
+search_full_content: true
+
+# Pagination
+#-------------------------------------------------------------------------------------
+#paginate: 5 # amount of posts to show
+#paginate_path: /blog/page:num/
 
 # Setting Collections
+#-------------------------------------------------------------------------------------
 collections_dir: all_collections
-
 collections:
   java:
     output: true
-    permalink: /:collection/:path
+    permalink: /:collection/:title
+  posts: # This is added to enable all posts to be generated under blog folder under site
+    output: true
+    permalink: /blog/:title
+
+# Blog post archives
+#-------------------------------------------------------------------------------------
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /blog/categories/
+tag_archive:
+  type: liquid
+  path: /blog/tags/
+# https://github.com/jekyll/jekyll-archives
+#jekyll-archives:
+#  enabled:
+#    - categories
+#    - tags
+#    - year
+#  layouts:
+#    categories: categories
+#    category: category
+#    tags: tags
+#    tag: tag
+#    year: posts
+#  permalinks:
+#    category: /categories/:name/
+#    tag: /tags/:name/
+#    year: /year/:year/
 
 # Setting defaults
+#-------------------------------------------------------------------------------------
 defaults:
   # _posts
   - scope:
@@ -41,60 +84,193 @@ defaults:
       type: posts
     values:
       layout: single
-      #author_profile: true
+      sidebar:
+        nav: "blog"
+      author_profile: false
       #read_time: true
       #comments: true
-      #share: true
+      share: true
       related: true
   # _pages
   - scope:
-      path: ""
+      path: "_pages"
       type: pages
     values:
       layout: single
+      author_profile: false
   # _java
   - scope:
       path: ""
       type: java
     values:
       layout: single
+      sidebar:
+        nav: "java"
       author_profile: false
+      #read_time: true
+      #comments: true
       share: true
+      related: false
 
 
-# Setting inclusions
-include: [ "_pages" ]
+# Reading Files
+#-------------------------------------------------------------------------------------
+include: [ ".htaccess", "_pages" ]
 
-# Setting exclusions
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - vendor
   - publish.sh
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
   - package.json
+  - Rakefile
+  - README
+  - tmp
 
-# Setting plugins
+keep_files:
+  - .git
+  - .svn
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Markdown conversion
+#-------------------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+#-------------------------------------------------------------------------------------
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+#-------------------------------------------------------------------------------------
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# HTML Compression
+#-------------------------------------------------------------------------------------
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Anchors for Social sites
+#-------------------------------------------------------------------------------------
+my-usernames:
+  - twitter-username: &my-twitter-username "i_m_ajit_y"
+
+site-urls:
+  - twitter-url: &my-twitter-url "https://twitter.com/i_m_ajit_y"
+  - github-url: &my-github-url "https://github.com/ajit-y"
+  - gitlab-url: &my-gitlab-url ""
+  - my-site-url: &my-site-url "https://ajit-y.github.io/ajit-notebook/"
+
+social-icons:
+  twitter-icon: &twitter-icon "fab fa-fw fa-twitter-square"
+  github-icon: &github-icon "fab fa-fw fa-github"
+  link-icon: &link-icon "fas fa-fw fa-link"
+  gitlab-icon: &gitlab-icon ""
+  mastodon-icon: &mastodon-icon ""
+
+social-labels:
+  twitter-label: &twitter "Twitter"
+  github-label: &github "GitHub"
+  site-label: &site-label "Ajit Yadav"
+
+# Site footer
+#-------------------------------------------------------------------------------------
+footer:
+  links:
+    - label: *twitter
+      icon: *twitter-icon
+      url: *my-twitter-url
+    - label: *github
+      icon: *github-icon
+      url: *my-github-url
+    - label: "Contact"
+      icon: *link-icon
+      url: "https://ajit-y.github.io/ajit-notebook/contact/"
+
+# Site Author details
+#-------------------------------------------------------------------------------------
+author:
+  name: *site-label
+  #avatar   : "/assets/images/bio-photo.jpg"
+  bio: "A tech learning enthusiast"
+  location: "UK"
+  links:
+    - label: *site-label
+      icon: *link-icon
+      url: *my-site-url
+    - label: *twitter
+      icon: *twitter-icon
+      url: *my-twitter-url
+    - label: *github
+      icon: *github-icon
+      url: *my-github-url
+
+# Social Sharing
+#-------------------------------------------------------------------------------------
+twitter:
+  username: *my-twitter-username
+facebook:
+  username: &facebook ""
+  app_id:
+  publisher:
+og_image: "/assets/images/site-logo.png" # Open Graph/Twitter default site image
+# For specifying social profiles, used in _includes/seo.html
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type: # Person or Organization (defaults to Person)
+  name: # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+    - *my-twitter-url
+    - "https://www.facebook.com/----"
+
+# SEO
+#-------------------------------------------------------------------------------------
+
+# Analytics
+#-------------------------------------------------------------------------------------
+
+# Comments
+#-------------------------------------------------------------------------------------
+
+# Plugins
+#-------------------------------------------------------------------------------------
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-remote-theme
   - jekyll-include-cache
-
-# Site Author details
-author:
-  name: "Ajit Yadav"
-  #avatar   : "/assets/images/bio-photo.jpg"
-  bio: "A tech learning enthusiast"
-  location: "UK"
-
-# Site footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/i_m_ajit_y"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ajit-y"
